@@ -10,6 +10,6 @@ This repository contains:
 * `scan_list.py`: script to scan a list of servers (`python scan_list.py FILE`)
 * `scan.py` : script to scan a server (`python can.py IP`)
 
-You can see my blog post [Analyzing Cobalt Strike for Fun and Profit](https://randhome.io/blog/2020/12/19/analyzing-cobalt-strike-for-fun-and-profit/) for more information.
+You can see my blog post [Analyzing Cobalt Strike for Fun and Profit](https://www.randhome.io/blog/2020/12/20/analyzing-cobalt-strike-for-fun-and-profit/) for more information.
 
 Credits : [Amnesty Tech](https://www.amnesty.org/en/tech/)

@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     for host in hosts:
         print("Checking {}".format(host))
-        if host.stirp() == "":
+        if host.strip() == "":
             continue
         if not host.startswith("http"):
             host = "https://{}".format(host)

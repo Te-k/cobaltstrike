@@ -36,8 +36,14 @@ def mp_worker( BITS, PORT, HTTP,output_list, host ):
                         config["bits"] = BITS
                         output_list.append(config)
                     else:
+                        config = dict()
+                        config["host"] = host
+                        config["result"] = "Config Extraction Failed"
+                        config["bits"] = BITS
+                        output_list.append(config)
                         print("Config extraction failed")
                 else:
+                    config = dict()
                     print("Beacon extraction failed")
                     config["host"] = host
                     config["result"] = "Beacon Extraction Failed"
@@ -53,18 +59,21 @@ def mp_worker( BITS, PORT, HTTP,output_list, host ):
                     config["bits"] = BITS
                     output_list.append(config)
                 else:
+                    config = dict()
                     print("Config extraction failed")
                     config["host"] = host
                     config["result"] = "Config Extraction Failed"
                     config["bits"] = BITS
                     output_list.append(config)
             else:
+                config = dict()
                 print(f"No {BITS} bits payload")
                 config["host"] = host
                 config["result"] = "Not Found"
                 config["bits"] = BITS
                 output_list.append(config)
         else:
+            config = dict()
             print(f"No {BITS} bits payload")
             config["host"] = host
             config["result"] = "Not Found"

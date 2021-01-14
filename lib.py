@@ -109,6 +109,11 @@ def search_config(data):
         r = re.search(b"\.\/\.\/\.\,.{2}\.\,\.\/\.\,", data)
         if r:
             return r.span()[0], 0x2e
+        else:
+            # Apparently some samples have a configuration that is not obfuscated
+            r = re.search(b"\x00\x01\x00\x01\x00\x02.{2}\x00\x02\x00\x01\x00\x02", data)
+            if r:
+                return r.span()[0], 0
     return None, None
 
 

@@ -50,7 +50,7 @@ def mp_worker( BITS, PORT, HTTP,output_list, host ):
                     config["result"] = "Beacon Extraction Failed"
                     output_list.append(config)
             elif data.startswith(b"MZ"):
-                config = decode_config(beacon)
+                config = decode_config(data)
                 if config:
                     print(f"Payload {BITS} bits found")
                     config["port"] = int(PORT)

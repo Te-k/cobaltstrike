@@ -8,7 +8,7 @@ This repository contains:
 * `output.csv` : CSV file containing CS servers identified online in Dec 2020
 * `rules.yar`: Yara rules for CS beacons
 * `scan_list.py`: script to scan a list of servers (`python scan_list.py FILE`)
-* `scan.py` : script to scan a server (`python can.py IP`)
+* `scan.py` : script to scan a server (`python scan.py IP`)
 
 You can see my blog post [Analyzing Cobalt Strike for Fun and Profit](https://www.randhome.io/blog/2020/12/20/analyzing-cobalt-strike-for-fun-and-profit/) for more information.
 

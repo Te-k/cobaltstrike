@@ -13,6 +13,9 @@ if __name__ == "__main__":
 
     ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    if not args.HOST.startswith("http"):
+        args.HOST = "http://{}/".format(args.HOST)
+        print("Assuming that you meant {}".format(args.HOST))
 
     print("Checking {}".format(args.HOST))
     try:
